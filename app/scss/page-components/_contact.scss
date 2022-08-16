@@ -1,0 +1,99 @@
+
+.contact-page{
+  padding: rem(50px 0 50px 0px);
+  position: relative;
+  h2{
+    color: cl(primary);
+  }
+  .contact-wrap-block{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    z-index: 2;
+    .contacts{
+      flex-grow: 1;
+      width: auto;
+      font-size: rem(18px);
+      line-height: rem(28px);
+      padding-top: 2rem;
+      max-width: calc(100% - 50rem);
+      @include media-breakpoint-down(md) {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 2rem;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      p{
+        margin-bottom: 0;
+      }
+      .contacts-info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: rem(18px);
+        line-height: rem(28px);
+        margin-bottom: 0.625rem;
+        color:cl(black);
+        dt {
+          color:cl(primary);
+          font-size: rem(16px);
+          width:rem(30px);
+        }
+        dd {
+          margin: 0;
+          a {
+            color:cl(black);
+          }
+        }
+      }
+    }
+    .contact-form{
+      width: rem(760px);
+      position: relative;
+      flex-shrink: 0;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .form{
+        border-radius: rem(8px);
+        background-color: rgb(255, 255, 255);
+        box-shadow: -1.22px 13.947px 32px 0px rgba(0, 0, 0, 0.21);
+        width: 100%;
+        position: relative;
+        z-index: 6;
+        padding: rem(35px 30px);
+        @include media-breakpoint-down(md) {
+          padding: rem(25px 20px);
+        }
+        h2{
+          margin-bottom: 0rem;
+          color: cl(primary);
+        }
+        p{
+          margin-bottom: 1.2rem;
+        }
+        .form-group{
+          margin-bottom: rem(30px);
+          textarea.form-control {
+            resize: none;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            height:rem(160px);
+          }
+        }
+        .btn{
+          @include media-breakpoint-down(sm) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.students-page{
+  padding: rem(50px 0 130px 0);
+  font-size: rem(18px);
+  line-height: 2;
+  h2,
+  h3,
+  h4,
+  h5{
+    color: cl(primary);
+    text-transform: none;
+  }
+  ul{
+    list-style: none;
+    li{
+      position: relative;
+      padding: rem(4px 0 4px 17px);
+      &:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: rem(21px);
+        height: 3px;
+        border-radius: 50%;
+        background-color: cl(black);
+        width: 3px;
+      }
+      ul{
+        padding-left: rem(25px);
+        li{
+          padding: rem(4px 0 4px 17px);
+        }
+      }
+    }
+  }
+  .students-image-block{
+    margin-top: rem(50px);
+    &.students-image-block-reverse{
+      .students-image-block-inner{
+        flex-direction: row-reverse;
+        .image-side{
+          padding-right: rem(70px);
+          padding-left: 0;
+          @include media-breakpoint-down(lg) {
+            padding-right: rem(10px);
+          }
+          @include media-breakpoint-down(md) {
+            padding-right: rem(0px);
+          }
+          img{
+            float: right;
+            @include media-breakpoint-down(lg) {
+              float: unset;
+            }
+          }
+        }
+      }
+    }
+    .students-image-block-inner{
+      display: flex;
+      align-items: flex-start;
+
+      @include media-breakpoint-down(md) {
+        flex-wrap: wrap;
+      }
+      .text-side{
+        width: 57%;
+        @include media-breakpoint-down(md) {
+          width: 100%;
+        }
+      }
+      .image-side{
+        width: 43%;
+        padding-left: rem(70px);
+        @include media-breakpoint-down(lg) {
+          padding-left: rem(10px);
+        }
+        @include media-breakpoint-down(md) {
+          padding-left: rem(0px);
+          width: 100%;
+        }
+        &:after{
+          content: "";
+          clear: both;
+        }
+        img{
+          width: 36vw;
+          box-shadow: 0px 40px 79px 0px rgba(0, 0, 0, 0.28);
+          max-height: rem(700px);
+          object-fit: cover;
+          float: left;
+          display: block;
+          @include media-breakpoint-down(lg) {
+            width: 100%;
+            float:unset;
+          }
+          @include media-breakpoint-down(md) {
+            width: 70%;
+            margin: 0 auto;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 100%;
+          }
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+.faq-section{
+  //padding: rem(75px 0 80px 0);
+  position: relative;
+
+  .accordion-wrap{
+    position: relative;
+  }
+  .faq-accordion{
+    z-index: 5;
+    position: relative;
+  }
+  .card {
+    background: none;
+    position: relative;
+    margin: rem(0 0 13px);
+    font-family: $font;
+    border: 0;
+    border-radius: 0;
+
+    .card-header {
+      background: none;
+      padding: 0;
+
+      border-bottom: 0;
+      .head-link {
+        border: 1px solid cl(primary);
+        border-bottom: 0;
+        border-bottom-right-radius: rem(0px);
+        border-bottom-left-radius: rem(0px);
+        &.collapsed {
+          border: 1px solid #d1d6d9;
+          border-bottom-right-radius: rem(8px);
+          border-bottom-left-radius: rem(8px);
+        }
+      }
+      button {
+        font-size: rem(18px);
+        line-height: rem(30px);
+        margin: rem(0 0 0px);
+        font-family: $font;
+        font-weight: 700;
+        color:cl(black);
+        background: cl(white);
+        width:100%;
+        display: block;
+        border:0;
+        padding: rem(20px 80px 20px 80px);
+        position: relative;
+        text-align: left;
+        border-radius: rem(8px);
+        @include media-breakpoint-down(sm) {
+          font-size: rem(20px);
+          line-height: rem(26px);
+        }
+        @include media-breakpoint-down(xs) {
+          font-size: rem(18px);
+          line-height: rem(26px);
+          padding: rem(14px 65px 14px 80px);
+        }
+        &:focus {
+          outline: none;
+        }
+
+        &.collapsed {
+          .plus-minus{
+
+            &:after{
+              opacity: 1;
+            }
+          }
+
+        }
+        @include media-breakpoint-down(xs) {
+          font-size: rem(20px);
+          line-height: rem(30px);
+        }
+        .plus-minus{
+          position: absolute;
+          right:rem(30px);
+          top: 50%;
+          transform: translateY(-50%) rotate(-180deg);
+          transition: all .3s ease;
+          width: rem(26px);
+          height: rem(26px);
+          @include media-breakpoint-down(xs) {
+            width: rem(20px);
+            height: rem(20px);
+            right:rem(20px);
+          }
+          &:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: rem(2px);
+            @extend .pos-centerY;
+            left: 0;
+            background-color: cl(primary);
+          }
+          &:after{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: rem(2px);
+            @extend .pos-centerX;
+            background-color: cl(primary);
+            top: 0;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+          }
+        }
+      }
+      .logo{
+        position: absolute;
+        left:rem(20px);
+        @extend .pos-centerY;
+        transition: all .3s ease;
+        z-index: 2;
+        width:rem(30px);
+        height: rem(30px);
+        object-fit: cover;
+        border-radius: 50%;
+        @include media-breakpoint-down(xs) {
+          width:rem(30px);
+          height: rem(30px);
+        }
+      }
+    }
+    .collapse-body {
+      border: 1px solid cl(primary);
+      border-bottom-right-radius: rem(8px);
+      border-bottom-left-radius: rem(8px);
+      border-top: 0;
+
+    }
+    .card-body {
+      background-color: cl(white);
+      padding: rem(20px 46px 20px 80px);
+      font-size: rem(16px);
+      line-height: rem(26px);
+      border:0;
+      border-radius: 0;
+      border-bottom-right-radius: rem(8px);
+      border-bottom-left-radius: rem(8px);
+      font-family: $font;
+      color: cl(text);
+      @include media-breakpoint-down(xs) {
+        padding: rem(10px 26px 20px 20px);
+      }
+      p {
+        margin: 0 0 1.5rem;
+        font-size: rem(16px);
+        line-height: rem(26px);
+        @include media-breakpoint-down(xs) {
+          font-size: rem(16px);
+          line-height: rem(26px);
+        }
+      }
+      &:focus {
+        outline: none;
+      }
+      div{
+        &:focus {
+          outline: none;
+        }
+      }
+      ul,ol{
+        padding-left: 2rem;
+      }
+
+    }
+  }
+}

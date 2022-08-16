@@ -1,0 +1,63 @@
+.board-meetings-block{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  column-gap: rem(20px);
+  flex-wrap: wrap;
+  .item{
+    border-radius: rem(8px);
+    background-color: rgb(255, 255, 255);
+    box-shadow: -1.22px 13.947px 32px 0px rgba(0, 0, 0, 0.21);
+    width: calc(50% - 1rem);
+    font-size: rem(16px);
+    line-height: rem(26px);
+    color: cl(text);
+    padding: rem(32px 36px);
+    overflow: hidden;
+    margin-bottom: rem(20px);
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+    a{
+      color: cl(primary);
+      word-break: break-all;
+    }
+    .date{
+      font-size: rem(18px);
+      line-height: rem(28px);
+      font-weight: 700;
+      color: cl(text);
+    }
+    .files-links{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 1rem;
+      img{
+        height: rem(24px);
+        max-width: 2rem;
+        max-height: unset;
+        -o-object-fit: contain;
+        object-fit: contain;
+        display: block;
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-right: 0.375rem;
+        object-position: center ;
+      }
+    }
+    .address{
+      font-size: rem(16px);
+      line-height: rem(26px);
+      color: cl(text);
+      margin-bottom: rem(10px);
+    }
+    .zoom{
+      color: cl(text);
+      margin-bottom: rem(10px);
+    }
+    .m-id{
+      color: cl(primary);
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.error {
+  &--page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  &-inner {width:100%;}
+  &-oops {
+    position: relative;
+    max-width: rem(780px);
+    height: rem(205px);
+    margin: 0 auto 1rem;
+    -webkit-mask: url(../img/error.svg);
+    -webkit-mask-size: 100%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    @include media-breakpoint-down(xs) {
+      height: 8rem;
+    }
+    &-image {
+      position: absolute;
+      left:0;
+      top:0;
+      width:100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-attachment: fixed;
+      @include media-breakpoint-down(md) {
+        background-attachment: scroll;
+      }
+    }
+  }
+  &-text {
+    max-width: rem(600px);
+    font-family: $font;
+    color: #000;
+    font-size: rem(18px);
+    line-height: rem(26px);
+    text-align: center;
+    margin: 0 auto;
+    h1{
+      font-family: $font;
+      font-size: rem(24px);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+    }
+    p {margin: rem(0 0 20px);}
+  }
+}

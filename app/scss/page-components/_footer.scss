@@ -1,0 +1,159 @@
+.footer {
+  background: #0c2a4f;
+  position: relative;
+  z-index: 2;
+  color:cl(white);
+  font-size: rem(18px);
+  line-height: 2;
+  a{
+    color: cl(white);
+  }
+  ul{
+    list-style: none;
+
+  }
+  p{
+    margin-bottom: 0;
+  }
+  h4{
+    @include media-breakpoint-down(sm) {
+      margin-top: 2rem;
+    }
+  }
+  &--social {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    order: 1;
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include circle(30px);
+      color:cl(white);
+      border:rem(1px solid cl(white));
+      @include media-breakpoint-down(xs) {
+        @include circle(40px);
+        margin: 0 1rem;
+      }
+      &:hover {
+        text-decoration: none;
+        background: cl(white);
+        color: cl(primary);
+      }
+      i {
+        font-size: rem(16px);
+        @include media-breakpoint-down(xs) {
+          font-size: rem(24px);
+        }
+      }
+    }
+  }
+  &-logo {
+    display: block;
+    width:rem(204px);
+    margin-bottom: rem(20px);
+    @include media-breakpoint-down(sm) {
+      margin: 0 auto 1.5rem;
+    }
+    img {
+      width:100%;
+      height: auto;
+    }
+  }
+  address{
+    margin-bottom: 1rem;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &-contacts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin-bottom: 0;
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+    }
+    dt {
+      color:cl(white);
+      font-size: rem(16px);
+      line-height: rem(26px);
+      width:rem(30px);
+    }
+    dd {
+      margin: 0;
+      a {
+        color:cl(white);
+      }
+    }
+  }
+  &-copy {
+    font-size: rem(14px);
+    font-family:$font;
+    @include media-breakpoint-down(xs) {
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  &--top-line{
+    padding: rem(75px 0 40px 0);
+
+  }
+  &--bottom-line{
+    padding: rem(6px 0);
+    color: cl(white);
+    @include media-breakpoint-down(md) {
+      padding-bottom: 6.5rem;
+
+    }
+    a{
+      margin-left: 1rem;
+      @include media-breakpoint-down(md) {
+        margin: 0 0.5rem;
+        white-space: nowrap;
+        text-align: center;
+      }
+    }
+  }
+  .sponsord-link{
+    img{
+      height: rem(20px);
+    }
+  }
+
+}
+
+.apply-mobile-buttom{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: none;
+  padding: 1rem 1rem;
+  background-color: cl(white);
+  z-index: 10;
+  text-align: center;
+  box-shadow: rem(5px 0 10px rgba(0,0,0,0.2));
+  @include media-breakpoint-down(md) {
+    display: block;
+
+  }
+  .btn{
+    min-width: rem(250px);
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+}

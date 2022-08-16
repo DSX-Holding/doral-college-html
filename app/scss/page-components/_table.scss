@@ -1,0 +1,108 @@
+table{
+  width: 100%;
+  tr{
+    border: 0;
+    font-size: rem(18px);
+    color: cl(black);
+    &:nth-child(even){
+      background-color: #f8f8f8;
+    }
+    &:first-child{
+      td{
+        b{
+          font-size: rem(16px);
+        }
+      }
+    }
+    td{
+      padding: rem(10px 15px);
+      min-width: rem(100px);
+      @include media-breakpoint-down(md) {
+        min-width: rem(180px);
+      }
+      &:first-child{
+        min-width: 22rem;
+      }
+    }
+  }
+}
+
+.table-pagination{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .pagination{
+    list-style: none;
+    .page-item{
+      &:before{
+        display: none;
+        padding: 0;
+      }
+      .page-link{
+        background-color: rgb(255, 255, 255);
+
+        border: 1px solid rgb(214, 214, 214);
+        font-size: rem(20px);
+        width: rem(40px);
+        height: rem(40px);
+        border-radius: rem(8px);
+        cursor: pointer;
+        color: cl(primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:focus{
+          border: 1px solid cl(primary);
+          outline: none;
+        }
+      }
+
+    }
+  }
+}
+.top-line{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .w-75{
+    width: rem(75px);
+  }
+  .entries-block{
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .search {
+    position: relative;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .form-control {
+      border-right: 0;
+      &:focus{
+        outline: none;
+        box-shadow: none;
+        border-right: 0;
+      }
+    }
+
+    .input-group-append{
+
+      .input-group-text{
+        background: transparent;
+        border: rem(1px solid  rgb(214, 214, 214));
+        border-left: 0;
+        &:hover{
+          color: cl(secondary);
+        }
+        &:focus{
+          outline: none;
+          box-shadow: none;
+          color: cl(secondary);
+        }
+      }
+    }
+  }
+}

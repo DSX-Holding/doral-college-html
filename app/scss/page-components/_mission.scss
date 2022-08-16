@@ -1,0 +1,251 @@
+.why {
+  &--section {
+    padding: rem(80px 0px 100px 0);
+    position: relative;
+    overflow: hidden;
+
+    z-index: 2;
+    background: center bottom/ cover no-repeat , cl(primary);
+    color: cl(white);
+    background-attachment: fixed;
+    @include media-breakpoint-down(lg) {
+      padding: rem(70px 0);
+      background-attachment: scroll;
+    }
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      gap:rem(32px);
+    }
+    &-wrap{
+      display: flex;
+      justify-content: space-between;
+      grid-gap:  2.5rem 2.5rem;
+      @include media-breakpoint-down(md) {
+       flex-wrap: wrap;
+      }
+    }
+    .item {
+      width:100%;
+      max-width:100%;
+      min-height: rem(300px);
+      position: relative;
+      overflow: hidden;
+      color:currentColor;
+      background-color: cl(white);
+      border-radius: rem(20px);
+      border: 1px solid white;
+      box-shadow: rem(-1px 4px 87px 0px rgba(0, 0, 0, 0.68));
+      @include media-breakpoint-down(md) {
+        width: calc(50% - 2rem);
+
+      }
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+
+      }
+      @include media-breakpoint-down(sm) {
+        min-height: unset;
+      }
+      &:before {
+        content: '';
+        background-size: 200% 200%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-image: url("../img/card-bg.jpg");
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+      }
+      &:hover {
+        color:currentColor;
+        img {
+          transform: scale(1.1);
+        }
+        &:before {
+          opacity: 1;
+        }
+      }
+      &__logo {
+        width: 100%;
+        img {
+          width:100%;
+          display: block;
+          margin: 0 auto;
+          height: auto;
+          @include media-breakpoint-down(md) {
+            width: 50%;
+            margin: 0 auto;
+          }
+        }
+      }
+      &__image{
+        display: block;
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .3s ease;
+      }
+      &__overlay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: flex-end;
+        padding: rem(35px 26px);
+        transition: background .3s ease;
+        color: black;
+        position: relative;
+        z-index: 2;
+        font-size: rem(17px);
+        .ttl {
+          font-size: rem(20px);
+          font-family: $fontTitle;
+          font-weight: 700;
+          margin-bottom: rem(13px);
+          color: cl(primary);
+        }
+        .icon{
+          width: rem(50px);
+          height: rem(50px);
+          object-fit: contain;
+          margin-bottom: 1.25rem;
+        }
+      }
+    }
+  }
+
+
+  &__column {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap:2.5rem;
+    position: relative;
+    z-index: 3;
+    &:first-child{
+      .item{
+        &:first-child{
+          &:before {
+            content: '';
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-image: url("../img/card-bg-1.jpg");
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+          }
+        }
+        &:nth-child(2){
+          &:before {
+            content: '';
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-image: url("../img/card-bg-2.jpg");
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+          }
+        }
+
+      }
+    }
+    &:nth-child(2){
+      .item{
+        &:nth-child(2){
+          &:before {
+            content: '';
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-image: url("../img/card-bg-3.jpg");
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+          }
+        }
+        &:nth-child(3){
+          &:before {
+            content: '';
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-image: url("../img/card-bg-4.jpg");
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+          }
+        }
+
+      }
+    }
+    &:nth-child(3){
+      .item{
+        &:first-child{
+          &:before {
+            content: '';
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-image: url("../img/card-bg-5.jpg");
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+          }
+        }
+        &:nth-child(2){
+          &:before {
+            content: '';
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-image: url("../img/card-bg-6.jpg");
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+          }
+        }
+
+      }
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      flex-direction: row;
+      align-items: stretch;
+      flex-wrap: wrap;
+      &:first-child{
+        order: 1;
+      }
+    }
+    @include media-breakpoint-down(xs) {
+      gap:rem(32px);
+      flex-direction: column;
+
+    }
+  }
+
+}

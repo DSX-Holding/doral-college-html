@@ -1,0 +1,93 @@
+.team-list {
+  margin-top: 3rem;
+  .item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size:rem(18px);
+    line-height:rem(34px);
+    color:cl(text);
+    padding:rem(80px 0px 0px 0px);
+    position: relative;
+    &:first-child {
+      padding: 0;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left:rem(80px);
+      top:0;
+      height: 100%;
+      background: cl(secondary);
+      width:rem(1px);
+      @include media-breakpoint-down(sm) {
+         display: none;
+       }
+    }
+    @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    align-items: center;
+      padding:rem(40px 0px 0px 0px);
+  }
+    .hold{
+      padding-top: 2rem;
+      @include media-breakpoint-down(sm) {
+       width: 100%;
+      }
+    }
+    .avatar {
+      width: rem(160px);
+      height: rem(160px);
+      border-radius: 50%;
+      flex-shrink: 0;
+      border:0.438rem solid cl(white);
+      box-shadow:0 0 0 1px cl(secondary), 0 0 0 10px cl(white);
+      margin:rem(0px 20px 0px 0px);
+      background: 50% 50%/ cover, no-repeat,  cl(white);
+      position: relative;
+      z-index: 3;
+
+      @include media-breakpoint-down(sm) {
+       margin:rem(0px 0px 20px 0px);
+      }
+    }
+
+    h2 {
+
+      font-size: rem(30px);
+      line-height: rem(36px);
+      font-weight: 700;
+      color: cl(primary);
+      text-align: left;
+      @include media-breakpoint-down(sm) {
+        font-size: rem(25px);
+        line-height: rem(30px);
+      }
+    }
+    h4{
+      text-align: left;
+      font-size: rem(22px);
+      line-height: rem(26px);
+      font-weight: 700;
+      color: cl(primary);
+      @include media-breakpoint-down(sm) {
+        font-size: rem(18px);
+        line-height: rem(25px);
+      }
+      @include media-breakpoint-down(xs) {
+        text-align: center;
+      }
+    }
+    .position {
+      display: block;
+      color: cl(primary);
+      margin:rem(0px 0px 10px 0px);
+      @include media-breakpoint-down(xs) {
+        text-align: center;
+      }
+    }
+    p {
+      margin:rem(0px 0px 10px 0px);
+    }
+  }
+}
