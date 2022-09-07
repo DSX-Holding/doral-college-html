@@ -576,14 +576,27 @@
 			background-color: cl(white);
 			width: 100%;
 			column-gap: 3%;
+			flex-wrap: wrap;
 		}
 		@include media-breakpoint-down(xs) {
 			flex-direction: column;
 		}
 		.btn{
 			line-height: rem(38px);
+			@include media-breakpoint-down(lg) {
+				padding: rem(0 10px);
+				font-size: rem(15px);
+			}
+			&:first-child{
+				@include media-breakpoint-down(md) {
+					width: 100%;
+					margin-bottom: 1rem;
+				}
+			}
 			@include media-breakpoint-down(md) {
-				width: 47%;
+				width: 48.5%;
+				padding: rem(0 10px);
+				font-size: rem(15px);
 			}
 			@include media-breakpoint-down(xs) {
 				width: 100%;

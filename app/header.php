@@ -29,6 +29,7 @@
                         <div class="header-buttons d-none d-lg-flex">
                             <a href="#" class="btn btn--outline-white">join our team</a>
                             <a href="apply.php" class="btn btn--white">Apply Now</a>
+                            <a href="https://web.archive.org/web/20220805203502/https://www.parchment.com/u/registration/36181350/account" class="btn btn--white" target="_blank">order transcripts</a>
                         </div>
 
                         <div class="open-nav-btn c-hamburger c-hamburger--htx">
@@ -43,6 +44,7 @@
                             <div class="header-buttons  d-lg-none">
                                 <a href="apply.php" class="btn btn--secondary" >Apply Now</a>
                                 <a href="#" class="btn btn--outline-primary">join our team</a>
+                                <a href="https://web.archive.org/web/20220805203502/https://www.parchment.com/u/registration/36181350/account" class="btn btn--outline-primary" target="_blank">order transcripts</a>
                             </div>
                             <ul>
                                 <li  <?php echo ($page == 'admission') ? 'class="active"' : '';?>>
