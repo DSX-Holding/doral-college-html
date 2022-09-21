@@ -103,6 +103,12 @@
         }
       }
     }
+    a{
+      text-decoration: underline;
+      &:hover{
+        color: cl(secondary);
+      }
+    }
     .first-block{
       display: flex;
       flex-wrap: wrap;
@@ -161,6 +167,25 @@
             background-color: cl(primary);
             left: 0;
             top: 1.2rem;
+          }
+          a{
+            text-decoration: underline;
+            &:hover{
+              color: cl(secondary);
+            }
+          }
+        }
+      }
+      ol{
+        padding-left: 1.5rem;
+        li{
+          position: relative;
+          padding: rem(5px 0 5px 10px);
+          a{
+            text-decoration: underline;
+            &:hover{
+              color: cl(secondary);
+            }
           }
         }
       }
@@ -306,6 +331,7 @@
         font-family: $font;
         line-height: rem(25px);
         border-radius: rem(4px);
+        text-decoration: none;
         @include media-breakpoint-down(md) {
           font-size: rem(16px);
           line-height: rem(26px);
@@ -568,7 +594,7 @@
             content: "";
             position: absolute;
             left: 0;
-            top: rem(21px);
+            top: rem(13px);
             height: 3px;
             border-radius: 50%;
             background-color: cl(black);
