@@ -84,10 +84,15 @@
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
+        padding-right: rem(120px);
         @include media-breakpoint-down(sm) {
+          padding-right: 0;
           flex-wrap: wrap;
         }
 
+      }
+      .add-to-calendar{
+        right: 0!important;
       }
       .event-date{
         min-width: rem(69px);
@@ -106,6 +111,9 @@
       }
       .event-time{
         padding-right: 2rem;
+        @include media-breakpoint-down(sm) {
+          padding-right: rem(100px);
+        }
       }
       .description{
         @include media-breakpoint-down(sm) {
@@ -119,6 +127,10 @@
         line-height: rem(25px);
         margin-bottom: rem(16px);
         color: cl(primary);
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
       }
       .news-item-img{
         flex-shrink: 0;
@@ -129,7 +141,13 @@
       p{
         margin-bottom: 0;
       }
-
+      .d-flex{
+        flex-wrap: wrap;
+        a{
+          text-decoration: underline;
+          margin-left: 0.25rem;
+        }
+      }
     }
   }
   .event-top-line{

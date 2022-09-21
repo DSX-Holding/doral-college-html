@@ -85,6 +85,7 @@
       color: cl(primary);
       text-transform: none;
     }
+
     .frame-wrap{
       margin-top: -3rem;
       max-width: 90vw;
@@ -95,6 +96,12 @@
     }
     p{
       margin-bottom: rem(20px);
+      a{
+        text-decoration: underline;
+        &:hover{
+          color: cl(secondary);
+        }
+      }
     }
     .first-block{
       display: flex;
@@ -573,6 +580,12 @@
               padding: rem(4px 0 4px 17px);
             }
           }
+        }
+      }
+      a{
+        text-decoration: underline;
+        &:hover{
+          color: cl(secondary);
         }
       }
     }
