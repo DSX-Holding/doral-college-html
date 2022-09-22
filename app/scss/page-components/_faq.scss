@@ -163,10 +163,44 @@
           outline: none;
         }
       }
-      ul,ol{
-        padding-left: 2rem;
-      }
 
+      ul{
+        margin-bottom: 0;
+        list-style: none;
+        li{
+          position: relative;
+          padding: rem(4px 0 4px 17px);
+          &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: rem(13px);
+            height: 3px;
+            border-radius: 50%;
+            background-color: cl(black);
+            width: 3px;
+          }
+          ul{
+            padding-left: rem(25px);
+            li{
+              padding: rem(4px 0 4px 17px);
+            }
+          }
+        }
+      }
+      ol{
+        padding-left: 1.5rem;
+        li{
+          position: relative;
+          padding: rem(5px 0 5px 10px);
+          a{
+            text-decoration: underline;
+            &:hover{
+              color: cl(secondary);
+            }
+          }
+        }
+      }
     }
   }
 }

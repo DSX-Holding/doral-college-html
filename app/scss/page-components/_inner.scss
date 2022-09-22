@@ -608,6 +608,19 @@
           }
         }
       }
+      ol{
+        padding-left: 1.5rem;
+        li{
+          position: relative;
+          padding: rem(5px 0 5px 10px);
+          a{
+            text-decoration: underline;
+            &:hover{
+              color: cl(secondary);
+            }
+          }
+        }
+      }
       a{
         text-decoration: underline;
         &:hover{
