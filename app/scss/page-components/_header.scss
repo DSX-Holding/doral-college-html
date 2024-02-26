@@ -541,7 +541,7 @@
 								> a {
 									color: cl(white);
 									text-decoration: none;
-									background: cl(secondary);
+									background: cl(primary);
 									@include media-breakpoint-down(lg) {
 										text-decoration: none;
 										background: cl(black, 0.05);
@@ -784,4 +784,10 @@ a{
 		outline: 1px dashed cl(secondary);
 		box-shadow: none;
 	}
+}
+
+body .uwy.userway_p1 .userway_buttons_wrapper {
+	top: unset!important;
+	bottom: 1.2rem!important;
+
 }
